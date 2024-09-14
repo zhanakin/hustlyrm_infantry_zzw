@@ -21,12 +21,775 @@ Target DLL:      UL2CM3.DLL V1.164.0.0
 Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
-d:\proj-rm\zhulikaohe\hustlyrm_infantry_zzw\project\new_infantry.uvprojx
-Project File Date:  09/12/2024
+D:\proj-rm\zhulikaohe\hustlyrm_infantry_zzw\project\project\new_infantry.uvprojx
+Project File Date:  09/15/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'd:\Keil_v5\ARM\ARMCLANG\Bin'
-Rebuild target 'Target 1'
+Rebuild target 'Infantry'
+../Library/src/misc.c(76): warning: In file included from...
+../Library/inc\misc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling misc.c...
+../User/src/app/HeatControl.c(1): warning: In file included from...
+../User/inc/app\HeatControl.h(4): warning: In file included from...
+../User/inc/peripheral\Referee.h(23): error: 'algorithmOfCRC.h' file not found
+#include "algorithmOfCRC.h"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+compiling HeatControl.c...
+../Library/src/stm32f4xx_adc.c(106): warning: In file included from...
+../Library/inc\stm32f4xx_adc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_adc.c...
+../User/src/app/GimbalSend.c(1): warning: In file included from...
+../User/inc/app\GimbalSend.h(8): warning: In file included from...
+../User/inc/app/HeatControl.h(4): warning: In file included from...
+../User/inc/peripheral\Referee.h(23): error: 'algorithmOfCRC.h' file not found
+#include "algorithmOfCRC.h"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+compiling GimbalSend.c...
+../Library/src/stm32f4xx_can.c(84): warning: In file included from...
+../Library/inc\stm32f4xx_can.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_can.c...
+../User/src/app/ChassisSolver.c(10): warning: In file included from...
+../User/inc/app\ChassisSolver.h(4): warning: In file included from...
+../User/inc/peripheral\remote_control.h(11): warning: In file included from...
+../Mylib/inc\counter.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling ChassisSolver.c...
+../User/src/app/ChasisController.c(1): warning: In file included from...
+../User/inc/app\ChasisController.h(9): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling ChasisController.c...
+../User/src/app/ins.c(13): warning: In file included from...
+../User/inc/app\ins.h(17): error: 'QuaternionEKF.h' file not found
+#include "QuaternionEKF.h"
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+compiling ins.c...
+../User/src/app/GimbalReceive.c(10): warning: In file included from...
+../User/inc/app\GimbalReceive.h(6): warning: In file included from...
+../User/inc/peripheral\remote_control.h(11): warning: In file included from...
+../Mylib/inc\counter.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling GimbalReceive.c...
+../User/src/app/main.c(10): warning: In file included from...
+../User/inc/app\main.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling main.c...
+../User/src/app/steer.c(1): warning: In file included from...
+../User/inc/app\ChasisController.h(9): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling steer.c...
+../User/src/app/PowerLimit.c(1): warning: In file included from...
+../User/inc/app\PowerLimit.h(4): warning: In file included from...
+../User/inc/peripheral\SuperPower.h(4): warning: In file included from...
+../Mylib/inc\bsp_superpower.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling PowerLimit.c...
+../User/src/app/omni.c(1): warning: In file included from...
+../User/inc/app\omni.h(4): error: 'accel.h' file not found
+#include "accel.h"
+         ^~~~~~~~~
+1 error generated.
+compiling omni.c...
+../User/src/app/NingCap.c(1): warning: In file included from...
+../User/inc/app\NingCap.h(79): warning: padding size of 'struct NingCapController' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct NingCapController
+               ^
+../User/src/app/NingCap.c(21): warning: implicit conversion turns floating-point number into integer: 'float' to 'uint16_t' (aka 'unsigned short') [-Wfloat-conversion]
+    send_data->P_ref = P_ref * 100.0f;
+                     ~ ~~~~~~^~~~~~~~
+../User/src/app/NingCap.c(24): warning: declaration shadows a variable in the global scope [-Wshadow]
+void ReceiveCapDecode(uint8_t *recv_data, SuperCapRecvData *cap_recv_data)
+                                                            ^
+../User/src/app/NingCap.c(5): note: previous declaration is here
+SuperCapRecvData cap_recv_data;
+                 ^
+../User/src/app/NingCap.c(29): warning: no previous prototype for function 'getCapEnergy' [-Wmissing-prototypes]
+void getCapEnergy()
+     ^
+../User/src/app/NingCap.c(29): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void getCapEnergy()
+^
+static 
+../User/src/app/NingCap.c(29): warning: this old-style function definition is not preceded by a prototype [-Wstrict-prototypes]
+void getCapEnergy()
+                 ^
+../User/src/app/NingCap.c(51): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+../User/src/app/NingCap.c(57): warning: enumeration value 'BufferEnergy_Low' not explicitly handled in switch [-Wswitch-enum]
+    switch (cap_controller.buffer_energy_state)
+            ^
+../User/src/app/NingCap.c(37): warning: no previous prototype for function 'RefereeOutputControl' [-Wmissing-prototypes]
+void RefereeOutputControl(float buffer_energy, float max_power)
+     ^
+../User/src/app/NingCap.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void RefereeOutputControl(float buffer_energy, float max_power)
+^
+static 
+../User/src/app/NingCap.c(85): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+../User/src/app/NingCap.c(90): warning: enumeration value 'CapVol_Low' not explicitly handled in switch [-Wswitch-enum]
+    switch (cap_controller.cap_vol_state)
+            ^
+../User/src/app/NingCap.c(71): warning: no previous prototype for function 'ChassisOutputControl' [-Wmissing-prototypes]
+void ChassisOutputControl(float need_power, float max_power)
+     ^
+../User/src/app/NingCap.c(71): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void ChassisOutputControl(float need_power, float max_power)
+^
+static 
+11 warnings generated.
+compiling NingCap.c...
+../User/src/app/mecanum.c(1): warning: In file included from...
+../User/inc/app\mecanum.h(4): error: 'accel.h' file not found
+#include "accel.h"
+         ^~~~~~~~~
+1 error generated.
+compiling mecanum.c...
+../Library/src/stm32f4xx_cec.c(93): warning: In file included from...
+../Library/inc\stm32f4xx_cec.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_cec.c...
+../Library/src/stm32f4xx_crc.c(29): warning: In file included from...
+../Library/inc\stm32f4xx_crc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_crc.c...
+../Library/src/stm32f4xx_cryp.c(164): warning: In file included from...
+../Library/inc\stm32f4xx_cryp.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_cryp.c...
+../Library/src/stm32f4xx_cryp_aes.c(55): warning: In file included from...
+../Library/inc\stm32f4xx_cryp.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_cryp_aes.c...
+../Library/src/stm32f4xx_cryp_des.c(48): warning: In file included from...
+../Library/inc\stm32f4xx_cryp.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_cryp_des.c...
+../Library/src/stm32f4xx_cryp_tdes.c(48): warning: In file included from...
+../Library/inc\stm32f4xx_cryp.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_cryp_tdes.c...
+../Library/src/stm32f4xx_dac.c(131): warning: In file included from...
+../Library/inc\stm32f4xx_dac.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dac.c...
+../Library/src/stm32f4xx_dbgmcu.c(29): warning: In file included from...
+../Library/inc\stm32f4xx_dbgmcu.h(37): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dbgmcu.c...
+../Library/src/stm32f4xx_dcmi.c(86): warning: In file included from...
+../Library/inc\stm32f4xx_dcmi.h(37): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dcmi.c...
+../Library/src/stm32f4xx_dfsdm.c(44): warning: In file included from...
+../Library/inc\stm32f4xx_rcc.h(37): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dfsdm.c...
+../Library/src/stm32f4xx_dma.c(124): warning: In file included from...
+../Library/inc\stm32f4xx_dma.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dma.c...
+../Library/src/stm32f4xx_dma2d.c(58): warning: In file included from...
+../Library/inc\stm32f4xx_dma2d.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dma2d.c...
+../Library/src/stm32f4xx_dsi.c(44): warning: In file included from...
+../Library/inc\stm32f4xx_dsi.h(37): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_dsi.c...
+../Library/src/stm32f4xx_exti.c(67): warning: In file included from...
+../Library/inc\stm32f4xx_exti.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_exti.c...
+../Library/src/stm32f4xx_flash.c(72): warning: In file included from...
+../Library/inc\stm32f4xx_flash.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_flash.c...
+../Library/src/stm32f4xx_flash_ramfunc.c(58): warning: In file included from...
+../Library/inc\stm32f4xx_flash_ramfunc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_flash_ramfunc.c...
+../Library/src/stm32f4xx_fmc.c(36): warning: In file included from...
+../Library/inc\stm32f4xx_fmc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_fmc.c...
+../Library/src/stm32f4xx_fmpi2c.c(79): warning: In file included from...
+../Library/inc\stm32f4xx_fmpi2c.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_fmpi2c.c...
+../Library/src/stm32f4xx_fsmc.c(35): warning: In file included from...
+../Library/inc\stm32f4xx_fsmc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_fsmc.c...
+../Library/src/stm32f4xx_gpio.c(84): warning: In file included from...
+../Library/inc\stm32f4xx_gpio.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_gpio.c...
+../Library/src/stm32f4xx_hash.c(123): warning: In file included from...
+../Library/inc\stm32f4xx_hash.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_hash.c...
+../Library/src/stm32f4xx_hash_md5.c(47): warning: In file included from...
+../Library/inc\stm32f4xx_hash.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_hash_md5.c...
+../Library/src/stm32f4xx_hash_sha1.c(47): warning: In file included from...
+../Library/inc\stm32f4xx_hash.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_hash_sha1.c...
+../Library/src/stm32f4xx_i2c.c(92): warning: In file included from...
+../Library/inc\stm32f4xx_i2c.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_i2c.c...
+../Library/src/stm32f4xx_iwdg.c(85): warning: In file included from...
+../Library/inc\stm32f4xx_iwdg.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_iwdg.c...
+../Library/src/stm32f4xx_lptim.c(96): warning: In file included from...
+../Library/inc\stm32f4xx_lptim.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_lptim.c...
+../Library/src/stm32f4xx_ltdc.c(76): warning: In file included from...
+../Library/inc\stm32f4xx_ltdc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_ltdc.c...
+../Library/src/stm32f4xx_pwr.c(38): warning: In file included from...
+../Library/inc\stm32f4xx_pwr.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_pwr.c...
+../Library/src/stm32f4xx_qspi.c(82): warning: In file included from...
+../Library/inc\stm32f4xx_qspi.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_qspi.c...
+../Library/src/stm32f4xx_rcc.c(59): warning: In file included from...
+../Library/inc\stm32f4xx_rcc.h(37): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_rcc.c...
+../Library/src/stm32f4xx_rng.c(56): warning: In file included from...
+../Library/inc\stm32f4xx_rng.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_rng.c...
+../Library/src/stm32f4xx_rtc.c(285): warning: In file included from...
+../Library/inc\stm32f4xx_rtc.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_rtc.c...
+../Library/src/stm32f4xx_sai.c(126): warning: In file included from...
+../Library/inc\stm32f4xx_sai.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_sai.c...
+../Library/src/stm32f4xx_sdio.c(156): warning: In file included from...
+../Library/inc\stm32f4xx_sdio.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_sdio.c...
+../Library/src/stm32f4xx_spdifrx.c(34): warning: In file included from...
+../Library/inc\stm32f4xx_spdifrx.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_spdifrx.c...
+../Library/src/stm32f4xx_spi.c(159): warning: In file included from...
+../Library/inc\stm32f4xx_spi.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_spi.c...
+../Library/src/stm32f4xx_syscfg.c(50): warning: In file included from...
+../Library/inc\stm32f4xx_syscfg.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_syscfg.c...
+../Library/src/stm32f4xx_tim.c(119): warning: In file included from...
+../Library/inc\stm32f4xx_tim.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_tim.c...
+../Library/src/stm32f4xx_usart.c(92): warning: In file included from...
+../Library/inc\stm32f4xx_usart.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_usart.c...
+../Library/src/stm32f4xx_wwdg.c(84): warning: In file included from...
+../Library/inc\stm32f4xx_wwdg.h(38): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling stm32f4xx_wwdg.c...
+../Library/CMSIS/MathLib/arm_mat_add_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_add_f32.c...
+../Library/CMSIS/MathLib/arm_mat_cmplx_mult_f32.c(40): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_cmplx_mult_f32.c...
+../Library/CMSIS/MathLib/arm_mat_init_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_init_f32.c...
+../Library/CMSIS/MathLib/arm_mat_inverse_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_inverse_f32.c...
+../Library/CMSIS/MathLib/arm_mat_mult_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_mult_f32.c...
+../Library/CMSIS/MathLib/arm_mat_scale_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_scale_f32.c...
+../Library/CMSIS/MathLib/arm_mat_sub_f32.c(41): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_sub_f32.c...
+../Library/CMSIS/MathLib/arm_mat_trans_f32.c(49): error: 'arm_math.h' file not found
+#include "arm_math.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling arm_mat_trans_f32.c...
+../Library/CMSIS/FastMath/arm_atan2_f32.c(44): warning: no previous prototype for function 'arm_atan_limited_f32' [-Wmissing-prototypes]
+float arm_atan_limited_f32(float x)
+      ^
+../Library/CMSIS/FastMath/arm_atan2_f32.c(44): note: declare 'static' if the function is not intended to be used outside of this translation unit
+float arm_atan_limited_f32(float x)
+^
+static 
+../Library/CMSIS/FastMath/arm_atan2_f32.c(56): warning: no previous prototype for function 'arm_atan_f32' [-Wmissing-prototypes]
+float arm_atan_f32(float x)
+      ^
+../Library/CMSIS/FastMath/arm_atan2_f32.c(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+float arm_atan_f32(float x)
+^
+static 
+2 warnings generated.
+compiling arm_atan2_f32.c...
+../FreeRTOS/src/croutine.c(29): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling croutine.c...
+../FreeRTOS/src/event_groups.c(38): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling event_groups.c...
+../FreeRTOS/src/list.c(37): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling list.c...
+../FreeRTOS/src/queue.c(37): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling queue.c...
+../FreeRTOS/src/tasks.c(39): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling tasks.c...
+../FreeRTOS/src/timers.c(37): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling timers.c...
+../FreeRTOS/portable/heap_4.c(45): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling heap_4.c...
+../FreeRTOS/portable/port.c(34): error: 'FreeRTOS.h' file not found
+#include "FreeRTOS.h"
+         ^~~~~~~~~~~~
+1 error generated.
+compiling port.c...
+../User/src/motor/GM6020.c(10): warning: In file included from...
+../User/inc/motor\GM6020.h(12): error: 'my_filter.h' file not found
+#include "my_filter.h"
+         ^~~~~~~~~~~~~
+1 error generated.
+compiling GM6020.c...
+../User/src/motor/M2006.c(10): warning: In file included from...
+../User/inc/motor\M2006.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling M2006.c...
+../User/src/motor/M3508.c(10): warning: In file included from...
+../User/inc/motor\M3508.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling M3508.c...
+../User/src/peripheral/icm20602.c(10): warning: In file included from...
+../User/inc/peripheral\icm20602.h(32): warning: In file included from...
+../Mylib/inc\counter.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling icm20602.c...
+../User/src/peripheral/ina260.c(1): warning: In file included from...
+../User/inc/peripheral\ina260.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling ina260.c...
+../User/src/peripheral/Referee.c(15): warning: In file included from...
+../User/inc/peripheral\Referee.h(23): error: 'algorithmOfCRC.h' file not found
+#include "algorithmOfCRC.h"
+         ^~~~~~~~~~~~~~~~~~
+1 error generated.
+compiling Referee.c...
+../User/src/peripheral/remote_control.c(1): warning: In file included from...
+../User/inc/peripheral\remote_control.h(11): warning: In file included from...
+../Mylib/inc\counter.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling remote_control.c...
+../User/src/tools/debug.c(1): warning: In file included from...
+../User/inc/tools\debug.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling debug.c...
+../User/src/peripheral/SuperPower.c(12): warning: In file included from...
+../User/inc/peripheral\SuperPower.h(4): warning: In file included from...
+../Mylib/inc\bsp_superpower.h(4): warning: In file included from...
+../User/inc/sys\stm32f4xx.h(102): error: "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+ #error "Please select first the target STM32F4xx device used in your application (in stm32f4xx.h file)"
+  ^
+../User/inc/sys\stm32f4xx.h(470): error: 'core_cm4.h' file not found
+#include "core_cm4.h"             /* Cortex-M4 processor and core peripherals */
+         ^~~~~~~~~~~~
+2 errors generated.
+compiling SuperPower.c...
+../User/src/tools/tools.c(19): warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+    for (i = 0; i < t * 4; i++)
+                ~ ^ ~~~~~
+../User/src/tools/tools.c(33): warning: comparison of integers of different signs: 'int' and 'unsigned long' [-Wsign-compare]
+    for (i = 0; i < t; i++)
+                ~ ^ ~
+2 warnings generated.
+compiling tools.c...
+compiling ZeroCheck.c...
+".\Objects\new_infantry.axf" - 133 Error(s), 15 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -39,7 +802,8 @@ Package Vendor: Keil
   d:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.17.1\Drivers\CMSIS\Device\ST\STM32F4xx\Include
 
 <h2>Collection of Component Files used:</h2>
-Build Time Elapsed:  00:00:00
+Target not created.
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
