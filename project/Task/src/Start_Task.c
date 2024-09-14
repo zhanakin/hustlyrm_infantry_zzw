@@ -16,50 +16,59 @@
 #define START_TASK_STK_SIZE 128 // 任务堆栈
 static TaskHandle_t StartTask_Handler;
 
-// 底盘位姿估计任务
-#define ChasisEstimate_TASK_PRIO 10      // 任务优先级
-#define ChasisEstimate_TASK_STK_SIZE 128 // 任务堆栈
-
 // CPU占用情况估计任务
 #define CPU_TASK_PRIO 2       // 任务优先级
 #define CPU_TASK_STK_SIZE 128 // 任务堆栈
+
+// 裁判系统任务
+#define REFEREE_TASK_PRIO 3
+#define REFEREE_TASK_STK_SIZE 128
+
+// 功率控制任务
+#define POWER_CONTROL_TASK_PRIO 3
+#define POWER_CONTROL_TASK_STK_SIZE 128
 
 // 测试任务
 #define TEST_TASK_PRIO 5
 #define TEST_TASK_STK_SIZE 128 // 任务堆栈
 
-#define CHASIS_CONTROL_TASK_PRIO 9
-#define CHASIS_CONTROL_TASK_STK_SIZE 256
-
+// 轮式里程计与加速度计数据融合任务
 #define WHEELS_ACCEL_FUSION_TASK_PRIO 6
 #define WHEELS_ACCEL_FUSION_TASK_STK_SIZE 128
 
-#define OFFLINE_TASK_PRIO 17
-#define OFFLINE_TASK_STK_SIZE 128
+// 底盘控制任务
+#define CHASIS_CONTROL_TASK_PRIO 9
+#define CHASIS_CONTROL_TASK_STK_SIZE 256    // 任务堆栈256
 
-#define SD_CARD_TASK_PRIO 28
-#define SD_CARD_TASK_STK_SIZE 128
-
-#define MF9025_SYS_IDEN_TASK_PRIO 20
-#define MF9025_SYS_IDEN_TASK_STK_SIZE 128
-
+// 蓝牙传输任务
 #define BLUE_TOOTH_TASK_PRIO 9
 #define BLUE_TOOTH_TASK_STK_SIZE 128
+
+// 底盘位姿估计任务
+#define ChasisEstimate_TASK_PRIO 10      // 任务优先级
+#define ChasisEstimate_TASK_STK_SIZE 128 // 任务堆栈
+
+// 云台控制任务
+#define GIMBAL_TASK_PRIO 15
+#define GIMBAL_TASK_STK_SIZE 128
+
+// 使用底盘的串口通信的情况下，从底盘接收数据控制任务
+#define ACTION_TASK_PRIO 16
+#define ACTION_TASK_STK_SIZE 128
+
+// 掉线检测任务
+#define OFFLINE_TASK_PRIO 17
+#define OFFLINE_TASK_STK_SIZE 128
 
 #define IWDG_TASK_PRIO 18
 #define IWDG_TASK_STK_SIZE 128
 
-#define ACTION_TASK_PRIO 16
-#define ACTION_TASK_STK_SIZE 128
+// MF9025电机
+#define MF9025_SYS_IDEN_TASK_PRIO 20
+#define MF9025_SYS_IDEN_TASK_STK_SIZE 128
 
-#define GIMBAL_TASK_PRIO 15
-#define GIMBAL_TASK_STK_SIZE 128
-
-#define REFEREE_TASK_PRIO 3
-#define REFEREE_TASK_STK_SIZE 128
-
-#define POWER_CONTROL_TASK_PRIO 3
-#define POWER_CONTROL_TASK_STK_SIZE 128
+#define SD_CARD_TASK_PRIO 28
+#define SD_CARD_TASK_STK_SIZE 128
 
 TaskHandle_t User_Tasks[TASK_NUM];
 
@@ -165,8 +174,9 @@ void start_task(void *pvParameters)
                 (UBaseType_t)IWDG_TASK_PRIO,             // 任务优先级
                 (TaskHandle_t *)&User_Tasks[IWDG_TASK]); // 任务句柄
 
-#endif // IWDG_TASK_ON
+#endif 
 
+    // IWDG_TASK_ON
     // //创建轮式里程计与加速度计数据融合任务
     // xTaskCreate((TaskFunction_t)WheelsAccelFusion_task,           //任务函数
     //             (const char *)"WheelsAccelFusion_task",           //任务名称

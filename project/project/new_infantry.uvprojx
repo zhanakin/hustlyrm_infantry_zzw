@@ -10,8 +10,8 @@
       <TargetName>Infantry</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6160000::V6.16::ARMCLANG</pCCUsed>
-      <uAC6>1</uAC6>
+      <pCCUsed>5060960::V5.06 update 7 (build 960)::.\ARMCC</pCCUsed>
+      <uAC6>0</uAC6>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F405RGTx</Device>
@@ -313,7 +313,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>2</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -325,7 +325,7 @@
             <wLevel>2</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
-            <uC99>0</uC99>
+            <uC99>1</uC99>
             <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>3</v6Lang>
@@ -337,9 +337,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define></Define>
+              <Define>USE_STDPERIPH_DRIVER,STM32F40_41xxx, ARM_MATH_CM4, __FPU_PRESENT=1, __FPU_USED =1, __CC_ARM,ARM_MATH_MATRIX_CHECK,ARM_MATH_ROUNDING</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Library\inc;..\FreeRTOS\inc;..\Mylib\inc;..\User\inc\config;..\User\inc\app;..\User\inc\os;..\User\inc\motor;..\User\inc\FATFS;..\User\inc\peripheral;..\User\inc\sys;..\User\inc\tools</IncludePath>
+              <IncludePath>..\Algorithm\inc;..\FreeRTOS\inc;..\Library\inc;..\Mylib\inc;..\Task\inc;..\User\inc;..\Library\CMSIS;..\User\inc\os;..\User\inc\sys;..\FreeRTOS\portable\RVDS\ARM_CM4F;..\Library\SEGGER_RTT_V784\RTT;..\Library\SEGGER_RTT_V784\Config;..\Library\CMSIS\FastMath;..\User\inc\FATFS;..\User\inc\app;..\User\inc\motor;..\User\inc\peripheral;..\User\inc\tools;..\User\inc\config;..\Mylib\inc\tof</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -443,10 +443,102 @@
               <FileType>1</FileType>
               <FilePath>..\User\src\app\steer.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\sys\stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f4xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\src\sys\system_stm32f4xx.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_stm32f40_41xxx.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\User\src\sys\startup_stm32f40_41xxx.s</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Mylib</GroupName>
+          <Files>
+            <File>
+              <FileName>bluetooth.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\bluetooth.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_referee.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\bsp_referee.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_superpower.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\bsp_superpower.c</FilePath>
+            </File>
+            <File>
+              <FileName>can_receive.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\can_receive.c</FilePath>
+            </File>
+            <File>
+              <FileName>can_send.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\can_send.c</FilePath>
+            </File>
+            <File>
+              <FileName>can1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\can1.c</FilePath>
+            </File>
+            <File>
+              <FileName>can2.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\can2.c</FilePath>
+            </File>
+            <File>
+              <FileName>counter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\counter.c</FilePath>
+            </File>
+            <File>
+              <FileName>dji_remote.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\dji_remote.c</FilePath>
+            </File>
+            <File>
+              <FileName>i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>os_tick.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\os_tick.c</FilePath>
+            </File>
+            <File>
+              <FileName>pc_uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\pc_uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>wifi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\wifi.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Library</GroupName>
@@ -467,34 +559,9 @@
               <FilePath>..\Library\src\stm32f4xx_can.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_cec.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_crc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Library\src\stm32f4xx_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_cryp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_cryp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_cryp_aes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_cryp_aes.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_cryp_des.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_cryp_des.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_cryp_tdes.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_cryp_tdes.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_dac.c</FileName>
@@ -502,34 +569,9 @@
               <FilePath>..\Library\src\stm32f4xx_dac.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_dbgmcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_dbgmcu.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_dcmi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_dcmi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_dfsdm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_dfsdm.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Library\src\stm32f4xx_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_dma2d.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_dma2d.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_dsi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_dsi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_exti.c</FileName>
@@ -547,39 +589,9 @@
               <FilePath>..\Library\src\stm32f4xx_flash_ramfunc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_fmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_fmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_fmpi2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_fmpi2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_fsmc.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_gpio.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Library\src\stm32f4xx_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_hash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hash_md5.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_hash_md5.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hash_sha1.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_hash_sha1.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_i2c.c</FileName>
@@ -590,26 +602,6 @@
               <FileName>stm32f4xx_iwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Library\src\stm32f4xx_iwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_lptim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_lptim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_ltdc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_ltdc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_qspi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_qspi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_rcc.c</FileName>
@@ -625,26 +617,6 @@
               <FileName>stm32f4xx_rtc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Library\src\stm32f4xx_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_sai.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_sai.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_sdio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_spdifrx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_spdifrx.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Library\src\stm32f4xx_spi.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_syscfg.c</FileName>
@@ -711,13 +683,177 @@
               <FileType>1</FileType>
               <FilePath>..\Library\CMSIS\FastMath\arm_atan2_f32.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_dbgmcu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Library\src\stm32f4xx_dbgmcu.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Library\SEGGER_RTT_V784\RTT\SEGGER_RTT.c</FilePath>
+            </File>
+            <File>
+              <FileName>SEGGER_RTT_printf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Library\SEGGER_RTT_V784\RTT\SEGGER_RTT_printf.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Library\src\stm32f4xx_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>arm_cortexM4lf_math.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Library\CMSIS\arm_cortexM4lf_math.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Algorithm</GroupName>
+          <Files>
+            <File>
+              <FileName>accel.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\accel.c</FilePath>
+            </File>
+            <File>
+              <FileName>algorithmOfCRC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\algorithmOfCRC.c</FilePath>
+            </File>
+            <File>
+              <FileName>crc32.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\crc32.c</FilePath>
+            </File>
+            <File>
+              <FileName>kalman_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\kalman_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>my_filter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\my_filter.c</FilePath>
+            </File>
+            <File>
+              <FileName>Observer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\Observer.c</FilePath>
+            </File>
+            <File>
+              <FileName>pid.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\pid.c</FilePath>
+            </File>
+            <File>
+              <FileName>QuaternionEKF.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\QuaternionEKF.c</FilePath>
+            </File>
+            <File>
+              <FileName>RLS_Identification.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\RLS_Identification.c</FilePath>
+            </File>
+            <File>
+              <FileName>SignalGenerator.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\SignalGenerator.c</FilePath>
+            </File>
+            <File>
+              <FileName>SystemIdentification.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\SystemIdentification.c</FilePath>
+            </File>
+            <File>
+              <FileName>TD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\TD.c</FilePath>
+            </File>
+            <File>
+              <FileName>user_lib.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\user_lib.c</FilePath>
+            </File>
+            <File>
+              <FileName>wheel_ins.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Algorithm\src\wheel_ins.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Task</GroupName>
+          <Files>
+            <File>
+              <FileName>ActionTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\ActionTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>BlueToothTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\BlueToothTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>ChasisControlTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\ChasisControlTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>ChasisEstimateTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\ChasisEstimateTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>CPU_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\CPU_Task.c</FilePath>
+            </File>
+            <File>
+              <FileName>GimbalTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\GimbalTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>iwdgTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\iwdgTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>Offline_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\Offline_Task.c</FilePath>
+            </File>
+            <File>
+              <FileName>PowerControlTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\PowerControlTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>RefereeTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\RefereeTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>SDCardTask.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\SDCardTask.c</FilePath>
+            </File>
+            <File>
+              <FileName>Start_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\Start_Task.c</FilePath>
+            </File>
+            <File>
+              <FileName>Test_Task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Task\src\Test_Task.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>FreeRTOS/src</GroupName>
@@ -771,6 +907,23 @@
         </Group>
         <Group>
           <GroupName>SD</GroupName>
+          <Files>
+            <File>
+              <FileName>bsp_spi_sdcard.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Mylib\src\bsp_spi_sdcard.c</FilePath>
+            </File>
+            <File>
+              <FileName>diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\inc\FATFS\diskio.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\inc\FATFS\ff.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>User/motor</GroupName>
@@ -844,6 +997,23 @@
         </Group>
         <Group>
           <GroupName>config</GroupName>
+          <Files>
+            <File>
+              <FileName>robot_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\inc\config\robot_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>can_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\inc\config\can_config.h</FilePath>
+            </File>
+            <File>
+              <FileName>robot_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\User\inc\config\robot_config.h</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

@@ -1,0 +1,10 @@
+.\objects\gm6020.o: ..\User\src\motor\GM6020.c
+.\objects\gm6020.o: ..\User\inc\motor\GM6020.h
+.\objects\gm6020.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\objects\gm6020.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\objects\gm6020.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+.\objects\gm6020.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\objects\gm6020.o: d:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\gm6020.o: ..\User\inc\tools\ZeroCheck.h
+.\objects\gm6020.o: ..\User\inc\tools\tools.h
+.\objects\gm6020.o: ..\Algorithm\inc\my_filter.h

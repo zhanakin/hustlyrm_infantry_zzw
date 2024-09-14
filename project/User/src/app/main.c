@@ -12,35 +12,7 @@
 /* clock frequency */
 RCC_ClocksTypeDef get_rcc_clock;
 
-int main(void)
-{
-    /* get clock frequency */
-    RCC_GetClocksFreq(&get_rcc_clock);
 
-#ifdef DEBUG_MODE
-    SEGGER_RTT_Init();
-    LOG_CLEAR();
-#ifdef JSCOPE_RTT_MODE
-    JscopeRTTInit();
-#endif // JSCOPE_RTT_MODE
-#endif // DEBUG_MODE
-
-    /* init */
-    BSP_Init();
-#if !TEST_TASK_ON
-    Robot_Init();
-		Is_Motor_On_Check();
-#endif // DEBUG
-
-    /* create task */
-    startTask();
-
-    /* 调度 */
-    vTaskStartScheduler();
-
-    while (1)
-        ;
-}
 
 /**
  * @brief STM32初始化
@@ -140,4 +112,34 @@ void Is_Motor_On_Check(void)
 			infantry.Motor_Init_Time += GetDeltaT(&infantry.Timer);
 			delay_ms(1);
 	}
+}
+
+int main(void)
+{
+    /* get clock frequency */
+    RCC_GetClocksFreq(&get_rcc_clock);
+
+#ifdef DEBUG_MODE
+    SEGGER_RTT_Init();
+    LOG_CLEAR();
+#ifdef JSCOPE_RTT_MODE
+    JscopeRTTInit();
+#endif // JSCOPE_RTT_MODE
+#endif // DEBUG_MODE
+
+    /* init */
+    BSP_Init();
+#if !TEST_TASK_ON
+    Robot_Init();
+	Is_Motor_On_Check();
+#endif // DEBUG
+
+    /* create task */
+    startTask();
+
+    /* 调度 */
+    vTaskStartScheduler();
+
+    while (1)
+    {}
 }

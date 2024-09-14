@@ -15,7 +15,7 @@
 /* whether use debug mode or not */
 // #define DEBUG_MODE
 // #define JSCOPE_RTT_MODE
-
+// #define DEBUG_MODE_FREERTOS
 /*  不同的任务设置一个开关，方便快速开关切换   */
 
 #ifdef DEBUG_MODE

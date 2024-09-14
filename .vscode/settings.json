@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "main.h": "c",
+        "arm_math.h": "c",
+        "start_task.h": "c",
+        "debug.h": "c",
+        "cpu_task.h": "c",
+        "gimbaltask.h": "c"
+    }
+}
