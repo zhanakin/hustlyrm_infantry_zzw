@@ -7,7 +7,7 @@ NingCapController cap_controller;
 
 void CapControllerInit()
 {
-    cap_controller.cap_energy_min = 0.5f * CAP_MIN_VOL * CAP_MIN_VOL * CAP_CAPACITY;
+    cap_controller.cap_energy_min = 0.5f * CAP_MIN_VOL * CAP_MIN_VOL * CAP_CAPACITY;    //W=二分之一CU方
     cap_controller.cap_energy_max = 0.5f * CAP_MAX_VOL * CAP_MAX_VOL * CAP_CAPACITY;
     cap_controller.buffer_energy_state = BufferEnergy_High;
     cap_controller.cap_vol_state = CapVol_Low;
@@ -102,6 +102,13 @@ void ChassisOutputControl(float need_power, float max_power)
 }
 
 // 输入缓冲能量、底盘最高功率，需要使用的功率，返回发送功率值，潜在返回电容功率发送值
+/**
+ * @brief 输出电容功率发送值
+ * @param buffer_energy:缓冲能量
+ * @param max_power:底盘最高功率
+ * @param need_power:需要使用的功率
+ * @retval cap_controller.set_power:发送功率值
+ */
 float NingCapControl(float buffer_energy, float max_power, float need_power)
 {
     // 计算能量

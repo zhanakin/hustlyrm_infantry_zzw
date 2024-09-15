@@ -1,5 +1,12 @@
 #include "can_send.h"
 
+/**
+ * @brief can发送
+ * @param CANx:CAN通道
+ * @param data:数据
+ * @param std_id:目标的CAN ID
+ * @param data_length:数据长度
+ */
 void CanSend(CAN_TypeDef *CANx, int8_t *data, uint32_t std_id, uint8_t data_length)
 {
   CanTxMsg tx_message;

@@ -1,7 +1,7 @@
 /**
  ******************************************************************************
  * @file    RefereeTask.c
- * @brief   ??????????????ï¿½ï¿½????????,?????????????
+ * @brief   ²ÃÅÐÏµÍ³ÈÎÎñ
  ******************************************************************************
  * @attention
  ******************************************************************************
@@ -10,7 +10,7 @@
 
 float UI_FRONT_ERR,UI_FRONT_SIN,UI_FRONT_COS;
 /**
- * @brief ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½UIï¿½ï¿½ï¿½ï¿½
+ * @brief „1¤7„1¤7„1¤7„1¤7„1¤7„1¤7UI„1¤7„1¤7„1¤7„1¤7
  * @param[in] void
  */
 void drawCapBar(graphic_data_struct_t *Graphic, uint8_t GraphOperate)
@@ -27,12 +27,12 @@ void drawCapBar(graphic_data_struct_t *Graphic, uint8_t GraphOperate)
 	UI_Draw_Line(Graphic, "310", GraphOperate, 4, COLOR, CAP_BAR_WIDTH, CAP_BAR_UI_START_X, CAP_BAR_UI_START_Y, CAP_BAR_UI_START_X + (u16)(cap_controller.cap_energy_pecent * CAP_BAR_LENGTH), CAP_BAR_UI_START_Y);
 }
 /**
- * @brief ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * @brief „1¤7„1¤7„1¤7„1¤70Ð30È1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
  * @param[in] void
  */
 float DT;
 uint32_t T;
-uint8_t Radar_double_hurt_chance;//ä¾›æ›¾ä¸–é¹çœ‹é›·è¾¾åŒå€æ˜“ä¼¤æ¬¡æ•°ï¼Œä¹‹åŽä¸ç”¨å°±åŽ»æŽ‰
+uint8_t Radar_double_hurt_chance;//¹©ÔøÊÀÅô¿´À×´ïË«±¶Ò×ÉË´ÎÊý£¬Ö®ºó²»ÓÃ¾ÍÈ¥µô
 void Refereetask(void *pvParameters)
 {
 	portTickType xLastWakeTime;
@@ -54,14 +54,14 @@ void Refereetask(void *pvParameters)
 
 		//		DT = GetDeltaT(&T);
 
-		/* UIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+		/* UI„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7 */
 		UI_PushUp_Counter++;
-		UI_PushUp_Counter_500 = UI_PushUp_Counter % 500; // 100HZï¿½ï¿½ï¿½ï¿½ 5ï¿½ï¿½Ë¢Ò»ï¿½ï¿½
-		UI_PushUp_Counter_60 = UI_PushUp_Counter % 60;	 // 600ï¿½ï¿½ï¿½ï¿½Ë¢Ò»ï¿½ï¿½
-		UI_PushUp_Counter_20 = UI_PushUp_Counter % 20;	 // 100ï¿½ï¿½ï¿½ï¿½Ë¢Ò»ï¿½ï¿½
-		UI_PushUp_Counter_10 = UI_PushUp_Counter % 10;	 // 100ï¿½ï¿½ï¿½ï¿½Ë¢Ò»ï¿½ï¿½
-		/*****************************************************ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½Æ²ï¿½ï¿½ï¿½*****************************************************************/
-		if (UI_PushUp_Counter_500 == 13) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		UI_PushUp_Counter_500 = UI_PushUp_Counter % 500; // 100HZ„1¤7„1¤7„1¤7„1¤7 5„1¤7„1¤70¹60Ý5„1¤7„1¤7
+		UI_PushUp_Counter_60 = UI_PushUp_Counter % 60;	 // 600„1¤7„1¤7„1¤7„1¤70¹60Ý5„1¤7„1¤7
+		UI_PushUp_Counter_20 = UI_PushUp_Counter % 20;	 // 100„1¤7„1¤7„1¤7„1¤70¹60Ý5„1¤7„1¤7
+		UI_PushUp_Counter_10 = UI_PushUp_Counter % 10;	 // 100„1¤7„1¤7„1¤7„1¤70¹60Ý5„1¤7„1¤7
+		/*****************************************************„1¤7„1¤70Á0„1¤7„1¤7„1¤70œ8„1¤7„1¤7„1¤7*****************************************************************/
+		if (UI_PushUp_Counter_500 == 13) // „1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
 		{
 #if ROBOT == CHEN_JING_YUAN
 			UI_Draw_Line(&referee_data.UI_Graph2.Graphic[0], "010", UI_Graph_Add, 3, UI_Color_White, 3, 588, 0, 801, 395);
@@ -89,7 +89,7 @@ void Refereetask(void *pvParameters)
 			UI_Draw_String(&referee_data.UI_String.String, "103", UI_Graph_Add, 2, UI_Color_Green, 17, 10, 3, 60, 750, "GIM_STATE:");
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-		else if (UI_PushUp_Counter_500 == 149) // PCï¿½ï¿½ï¿½ï¿½
+		else if (UI_PushUp_Counter_500 == 149) // PC„1¤7„1¤7„1¤7„1¤7
 		{
 			is_pc_offline = !gimbal_receiver_pack1.is_pc_on;
 			if (!is_pc_offline)
@@ -99,7 +99,7 @@ void Refereetask(void *pvParameters)
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
 #if ROBOT == NIUNIU || ROBOT == QI_TIAN_DA_SHENG
-		else if (UI_PushUp_Counter_500 == 179) // ï¿½ï¿½ï¿½Õ¸ï¿½ï¿½ï¿½ï¿½ï¿½
+		else if (UI_PushUp_Counter_500 == 179) // „1¤7„1¤7„1¤70ð4„1¤7„1¤7„1¤7„1¤7„1¤7
 		{
 			is_cover_off = remote_controller.bomb_bay ? 0 : 1;
 			if (!is_cover_off)
@@ -109,32 +109,32 @@ void Refereetask(void *pvParameters)
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
 #endif
-		else if (UI_PushUp_Counter_500 == 211) // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ì¿ï¿½ï¿½ï¿½Ä£Ê½
+		else if (UI_PushUp_Counter_500 == 211) // „1¤7„1¤70¢2„1¤7„1¤7„1¤70Â9„1¤7„1¤7„1¤7000¶4
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "100", UI_Graph_Add, 2, UI_Color_Green, 30, 12, 3, 155, 600, chassis_state[remote_controller.control_mode_action]);
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-		else if (UI_PushUp_Counter_500 == 251) // ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½Ä£Ê½
+		else if (UI_PushUp_Counter_500 == 251) // „1¤7„1¤70À6„1¤7„1¤7„1¤7„1¤7000¶4
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "101", UI_Graph_Add, 2, UI_Color_Green, 17, 12, 3, 120, 650, gimbal_state[remote_controller.gimbal_action]);
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-		else if (UI_PushUp_Counter_500 == 283) // IDï¿½ï¿½ï¿½ï¿½
+		else if (UI_PushUp_Counter_500 == 283) // ID„1¤7„1¤7„1¤7„1¤7
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "102", UI_Graph_Add, 2, UI_Color_Green, 15, 8, 3, 600, 880, "ID:   ");
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-		else if (UI_PushUp_Counter_500 == 317) // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		else if (UI_PushUp_Counter_500 == 317) // „1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "200", UI_Graph_Add, 2, UI_Color_Green, 25, 11, 3, 860, 70, "CAP:     V");
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-//		else if (UI_PushUp_Counter_500 == 353) // PITCHï¿½ï¿½ï¿½ï¿½
+//		else if (UI_PushUp_Counter_500 == 353) // PITCH„1¤7„1¤7„1¤7„1¤7
 //		{
 //			UI_Draw_String(&referee_data.UI_String.String, "201", UI_Graph_Add, 2, UI_Color_Green, 15, 8, 3, 1280, 800, "PITCH: ");
 //			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 //		}
-		else if (UI_PushUp_Counter_500 == 353) // åŒå€æ˜“ä¼¤æ¬¡æ•°
+		else if (UI_PushUp_Counter_500 == 353) // Ë«±¶Ò×ÉË´ÎÊý
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "209", UI_Graph_Add, 2, UI_Color_Green, 15, 8, 3, 1280, 800, "Radar: ");
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
@@ -151,7 +151,7 @@ void Refereetask(void *pvParameters)
 		{
 			//UI_Draw_Float(&referee_data.UI_Graph5.Graphic[0], "300", UI_Graph_Add, 3, UI_Color_Pink, 15, 2, 4, 1380, 800, gimbal_receiver_pack1.gimbal_pitch / 100.0f);
 			
-			//é›·è¾¾è‡ªå®šä¹‰æ¶ˆæ¯
+			//À×´ï×Ô¶¨ÒåÏûÏ¢
 			UI_Draw_Int(&referee_data.UI_Graph5.Graphic[0], "300", UI_Graph_Add, 3, UI_Color_Orange, 15, 4, 1380, 800, Radar_double_hurt_chance);	
 			
 			UI_Draw_Float(&referee_data.UI_Graph5.Graphic[1], "301", UI_Graph_Add, 3, UI_Color_Orange, 25, 2, 4, 960, 70, cap_controller.cap_vol);
@@ -166,8 +166,8 @@ void Refereetask(void *pvParameters)
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
 
-		/*****************************************************ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½Æ²ï¿½ï¿½ï¿½*****************************************************************/
-		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¨ï¿½ï¿½ï¿½ï¿½×´Ì¬UI
+		/*****************************************************„1¤7„1¤70Á0„1¤7„1¤7„1¤70œ8„1¤7„1¤7„1¤7*****************************************************************/
+		// „1¤7„1¤7„1¤7„1¤7„1¤7„1¤70À6„1¤7„1¤7„1¤7„1¤70ü80Á0UI
 		else if (UI_PushUp_Counter_60 == 10)
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "101", UI_Graph_Change, 2, UI_Color_Orange, 17, 12, 3, 220, 750, gimbal_state[remote_controller.gimbal_action]);
@@ -181,24 +181,24 @@ void Refereetask(void *pvParameters)
 //			UI_PushUp_Graphs(2, &referee_data.UI_Graph2, referee_data.Game_Robot_State.robot_id);	
 //		}
 
-		// ï¿½ï¿½ï¿½Æµï¿½ï¿½Ì¿ï¿½ï¿½ï¿½×´Ì¬UI
+		// „1¤7„1¤7„1¤701„1¤7„1¤70Â9„1¤7„1¤7„1¤70ü80Á0UI
 		else if (UI_PushUp_Counter_60 == 30)
 		{
 			UI_Draw_String(&referee_data.UI_String.String, "100", UI_Graph_Change, 2, UI_Color_Orange, 17, 12, 3, 220, 700, chassis_state[remote_controller.control_mode_action]);
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
 
-		// UIï¿½ï¿½ï¿½ï¿½(2Hz)
+		// UI„1¤7„1¤7„1¤7„1¤7(2Hz)
 		else if (UI_PushUp_Counter_60 == 40)
 		{
-			// pitchï¿½ï¿½ï¿½
+			// pitch„1¤7„1¤7„1¤7
 //			UI_Draw_Float(&referee_data.UI_Graph5.Graphic[0], "300", UI_Graph_Change, 3, UI_Color_Pink, 15, 2, 4, 1380, 800, gimbal_receiver_pack1.gimbal_pitch / 100.0f);
 
-			// RadaråŒå€æ˜“ä¼¤æ¬¡æ•°
+			// RadarË«±¶Ò×ÉË´ÎÊý
 			UI_Draw_Int(&referee_data.UI_Graph5.Graphic[0], "300", UI_Graph_Change, 3, UI_Color_Orange, 15, 4, 1380, 800, Radar_double_hurt_chance);			
 			
 			UI_Draw_Float(&referee_data.UI_Graph5.Graphic[1], "301", UI_Graph_Change, 3, UI_Color_Orange, 25, 2, 4, 960, 70, cap_controller.cap_vol);
-			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ID
+			// „1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7ID
 			UI_Draw_Int(&referee_data.UI_Graph5.Graphic[2], "302", UI_Graph_Change, 3, UI_Color_Cyan, 20, 2, 640, 880, gimbal_receiver_pack1.autoaim_id);
 
 			UI_PushUp_Graphs(5, &referee_data.UI_Graph5, referee_data.Game_Robot_State.robot_id);
@@ -223,7 +223,7 @@ void Refereetask(void *pvParameters)
 				UI_Draw_String(&referee_data.UI_String.String, "002", UI_Graph_Change, 2, UI_Color_Orange, 17, 14, 3, 60, 650, "PC       :OFF");
 			UI_PushUp_String(&referee_data.UI_String, referee_data.Game_Robot_State.robot_id);
 		}
-		// ï¿½ï¿½ï¿½ï¿½Ê£ï¿½ï¿½ï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½
+		// „1¤7„1¤7„1¤7„1¤70³8„1¤7„1¤7„1¤70Ö9„1¤7„1¤7„1¤7„1¤7
 		else if (UI_PushUp_Counter_20 == 1)
 		{
 			drawCapBar(referee_data.UI_Graph1.Graphic, UI_Graph_Change);
@@ -237,7 +237,7 @@ void Refereetask(void *pvParameters)
 			UI_PushUp_Graphs(2, &referee_data.UI_Graph2, referee_data.Game_Robot_State.robot_id);	
 		}
 
-		xEventGroupSetBits(xCreatedEventGroup, REFEREE_TASK_BIT); // ï¿½ï¿½Ö¾Î»ï¿½ï¿½Ò»
+		xEventGroupSetBits(xCreatedEventGroup, REFEREE_TASK_BIT); // „1¤7„1¤70÷4¦Ë„1¤7„1¤70Ý5
 
 		vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(10));
 	}
